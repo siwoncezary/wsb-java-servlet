@@ -8,6 +8,7 @@
     <li><a href="/webapp//hello">Servlet Hello</a> </li>
     <li><a href="/webapp/html">Servlet HTML</a></li>
     <li><a href="/webapp/calc?op=*&a=3&b=5">Servlet Calc</a></li>
+    <li><a href="calc.jsp">Kalkulator</a></li>
     <h3>
     <%!
         double calc(double a, double b){

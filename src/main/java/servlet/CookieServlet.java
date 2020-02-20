@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-//servelt obsługuje dwa endpointy
+//servlet obsługuje dwa endpointy
 @WebServlet(value = {"/cookie","/cookie/color"})
 public class CookieServlet extends HttpServlet {
     @Override
@@ -15,7 +15,7 @@ public class CookieServlet extends HttpServlet {
         for(Cookie c : req.getCookies()){
             System.out.println(c.getName() + " " + c.getMaxAge() + " " + c.getValue());
         }
-        //rozpoznajmey na podstawie URI, który z endpointów obsługujemy
+        //rozpoznajemy na podstawie URI, który z endpointów obsługujemy
         if (req.getRequestURI().endsWith("/color")){
             resp.addCookie(new Cookie("color", "#FF0"));
             resp.getWriter().println("Utworzono ciastko color");
